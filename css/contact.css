@@ -1,0 +1,149 @@
+/* Existing CSS (including the provided #contacts styles) */
+#contacts .content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#contacts .content .section-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--white-color); /* Make sure --white-color is defined */
+    position: relative;
+}
+
+#contacts .content .section-title::before {
+    content: "";
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+    width: 150px;
+    height: 1px;
+    border-radius: 5px;
+    background: var(--description-color); /* Make sure --description-color is defined */
+}
+
+#contacts .content .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    border-radius: 5px;
+    background: var(--main-color); /* Make sure --main-color is defined */
+}
+
+#contacts .content .columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+#contacts .content .columns .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 2; /* Takes up more space */
+    width: 100%; /* Important for responsiveness */
+}
+
+#contacts .content .columns .contact-form .row {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+#contacts .content .columns .contact-form .row label {
+    color: var(--description-color);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.row input, .row select {
+    background: var(--stats-background); /* Make sure --stats-background is defined */
+    border: none;
+    padding: 20px 25px;
+    font-size: 17px;
+    color: var(--white-color);
+    outline: none;
+    border-radius: 5px;
+    transition: 0.2s;
+    width: 100%; /* Added to ensure full width */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.row input[type="checkbox"] {
+    accent-color: var(--main-color);
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -2.5px;
+    overflow: hidden;
+}
+
+.row textarea {
+    background: var(--stats-background);
+    padding: 15px 20px;
+    font-size: 15px;
+    outline: none;
+    line-height: 1.6;
+    border-radius: 5px;
+    color: var(--white-color);
+    font-family: var(--main-font); /* Make sure --main-font is defined */
+    border: none;
+    transition: 0.2s;
+    resize: vertical;
+    overflow-y: auto;
+    min-height: 200px;
+    max-height: 350px;
+    width: 100%; /* Added to ensure full width */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.row input:focus, .row textarea:focus, .row select:focus, .row select option:focus, .row input:hover, .row textarea:hover, .row select:hover, .row select option:hover {
+    background: var(--how-to-join-button-background); /* Make sure --how-to-join-button-background is defined */
+}
+
+#contacts .content .columns .contact-form .form-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: end;
+}
+
+#contacts .content .columns .contact-form .form-footer button {
+    background: var(--copy-ip-button-background); /* Make sure --copy-ip-button-background is defined */
+    border: 2px solid var(--main-color);
+    border-radius: 3px;
+    padding: 10px 30px;
+    color: var(--white-color);
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    gap: 10px;
+}
+
+#contacts .content .columns .contact-form .form-footer button:hover {
+    opacity: 0.8;
+}
+
+#contacts .content .columns .contact-form .form-footer .alert {
+    color: var(--description-color);
+    font-size: 15px;
+}
+
+/* ... (rest of your CSS) */
+
+/* Add this to make the form work within the columns layout */
+#contacts .content .columns .contact-form .contact-form {
+    display: contents; /* Removes the extra div */
+}

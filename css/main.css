@@ -1,0 +1,235 @@
+/* alternative.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root {
+    --main-font: 'Inter', sans-serif;
+    --main-color: #39BEFF;
+    --background-color: #24272B;
+    --white-color: #FFFFFF;
+    --description-color: #D2D0D0;
+    --service-box-bg: #33363b;
+}
+
+body {
+    font-family: var(--main-font);
+    background-color: var(--background-color);
+    color: var(--description-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+h3 {
+    justify-content: center;
+    text-align: center;
+}
+
+.navbar {
+    background-color: var(--background-color);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--white-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.logo img {
+    max-height: 40px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--description-color);
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--white-color);
+}
+
+.menu-toggle {
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.hero {
+    background-color: var(--background-color);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    color: var(--white-color);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #2a98d8;
+}
+
+.services {
+    padding: 80px 20px;
+    background-color: #1a1c1f;
+}
+
+.section-title {
+    color: var(--white-color);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.service {
+    background-color: var(--service-box-bg);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.service:hover {
+    transform: scale(1.03);
+}
+
+.service img {
+    max-width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: block;
+}
+
+.service a {
+    text-decoration: none;
+}
+
+.service-button {
+    background-color: var(--main-color);
+    color: var(--white-color);
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.service-button:hover {
+    background-color: #2a98d8;
+}
+
+.about-us {
+    padding: 80px 20px;
+    background-color: #24272B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.about-us h2 {
+    color: var(--white-color);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Footer Styles (Corrected) */
+.footer {
+    background-color: #1a1c1f;
+    color: var(--description-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links .link {
+    color: var(--description-color);
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+.social-links .link:hover {
+    color: var(--white-color);
+}
+
